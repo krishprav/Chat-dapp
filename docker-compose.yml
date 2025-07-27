@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=${NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID}
+      - NEXT_PUBLIC_IPFS_AUTH=${NEXT_PUBLIC_IPFS_AUTH}
+      - NEXT_PUBLIC_WEBSOCKET_URL=http://localhost:3001
+    depends_on:
+      - server
+    networks:
+      - chat-network
+
+  server:
+    build: ./server
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=production
+    networks:
+      - chat-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  chat-network:
+    driver: bridge
+
+volumes:
+  chat-data:

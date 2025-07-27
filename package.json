@@ -1,0 +1,45 @@
+{
+  "name": "web3-chat-room",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "dev:server": "cd server && npm run dev",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:server\"",
+    "install:all": "npm install && cd server && npm install",
+    "test": "node tests/basic-functionality.test.js",
+    "verify": "npm run build && npm run test",
+    "precheck": "node pre-build-check.js"
+  },
+  "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.1.7",
+    "@tanstack/react-query": "^5.62.12",
+    "ethers": "^6.13.4",
+    "lucide-react": "^0.469.0",
+    "next": "15.4.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "socket.io-client": "^4.8.1",
+    "viem": "^2.26.9",
+    "wagmi": "^2.14.12",
+    "@headlessui/react": "^2.2.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,59 @@
+|-- public
+    |-- file.svg
+    |-- next.svg
+    |-- vercel.svg
+    |-- globe.svg
+    |-- window.svg
+|-- eslint.config.mjs
+|-- postcss.config.mjs
+|-- tsconfig.json
+|-- next-env.d.ts
+|-- src
+    |-- app
+        |-- favicon.ico
+        |-- layout.tsx
+        |-- globals.css
+        |-- page.tsx
+    |-- lib
+        |-- utils.ts
+        |-- encryption.ts
+        |-- env.ts
+        |-- web3.ts
+        |-- ipfs.ts
+    |-- types
+        |-- index.ts
+        |-- env.d.ts
+    |-- components
+        |-- Providers.tsx
+        |-- WalletConnectButton.tsx
+        |-- ChatHeader.tsx
+        |-- RoomList.tsx
+        |-- MessageList.tsx
+        |-- MessageInput.tsx
+        |-- CreateRoomModal.tsx
+        |-- ConfigChecker.tsx
+    |-- hooks
+        |-- useChatStore.ts
+        |-- useSocket.ts
+|-- package-lock.json
+|-- server
+    |-- package.json
+    |-- index.js
+    |-- Dockerfile
+    |-- package-lock.json
+|-- README.md
+|-- deploy.sh
+|-- setup.sh
+|-- Dockerfile
+|-- docker-compose.yml
+|-- .gitignore
+|-- tests
+    |-- basic-functionality.test.js
+|-- PROJECT-STATUS.md
+|-- .env.local
+|-- IPFS-FIX.md
+|-- verify-setup.sh
+|-- next.config.ts
+|-- pre-build-check.js
+|-- package.json
+|-- BUILD-FIX-SUMMARY.md
